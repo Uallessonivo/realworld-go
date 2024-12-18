@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"Github.com/Uallessonivo/RealWorld/cmd"
+)
 
 func main() {
-	fmt.Println("Hello, RealWorld!")
+	cmd.Execute()
 }
