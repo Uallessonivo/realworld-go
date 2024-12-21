@@ -1,7 +1,7 @@
 package config
 
 import (
-	"Github.com/Uallessonivo/RealWorld/internal/models"
+	"Github.com/Uallessonivo/RealWorld/internal/core/domain/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
