@@ -9,7 +9,3 @@ type Comment struct {
 	body      string
 	author    Profile
 }
-
-type Comments struct {
-	comments []Comment
-}
