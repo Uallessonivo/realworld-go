@@ -1,4 +1,4 @@
-package config
+package database
 
 import (
 	"Github.com/Uallessonivo/RealWorld/internal/core/domain/models"
@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func InitDatabase() {
+func InitSqlite() {
 	db, err := gorm.Open(sqlite.Open("realworld.db"), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
