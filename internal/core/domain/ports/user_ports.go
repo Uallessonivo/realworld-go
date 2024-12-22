@@ -8,3 +8,10 @@ type UserRepository interface {
 	UpdateUser(model *models.User) error
 	FindByEmail(email string) (*models.User, error)
 }
+
+type UserService interface {
+	GetUserById(id int) (*models.User, error)
+	CreateUser(model *models.UserRegistrationRequest) (*models.User, error)
+	UpdateUser(model *models.UserUpdateRequest) (*models.User, error)
+	FindByEmail(email string) (*models.User, error)
+}
