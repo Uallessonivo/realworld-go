@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func InitSqlite() {
+func InitDb() {
 	db, err := gorm.Open(sqlite.Open("realworld.db"), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")

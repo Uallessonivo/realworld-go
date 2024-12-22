@@ -1,15 +1,11 @@
 package cmd
 
 import (
-	"log"
-
 	"Github.com/Uallessonivo/RealWorld/pkg/database"
-	"github.com/gofiber/fiber/v2"
+	"Github.com/Uallessonivo/RealWorld/pkg/server"
 )
 
 func Execute() {
-	database.InitSqlite()
-
-	app := fiber.New()
-	log.Fatal(app.Listen(":3000"))
+	database.InitDb()
+	server.InitServerApp()
 }
