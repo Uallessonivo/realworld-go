@@ -1,6 +1,8 @@
 package models
 
-import "time"
+import (
+	"gorm.io/gorm"
+)
 
 type CommentRequest struct {
 	Body string
@@ -15,9 +17,10 @@ type CommentsResponse struct {
 }
 
 type Comment struct {
-	ID        int
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	Body      string
+	gorm.Model
+	Article   Article
+	ArticleId uint
 	Author    Profile
+	AuthorId  uint
+	Body      string
 }

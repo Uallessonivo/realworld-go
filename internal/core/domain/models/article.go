@@ -1,6 +1,8 @@
 package models
 
-import "time"
+import (
+	"gorm.io/gorm"
+)
 
 type ArticleRequest struct {
 	Title       string
@@ -14,15 +16,13 @@ type ArticleResponse struct {
 }
 
 type Article struct {
-	ID             int
-	Slug           string
-	Title          string
-	Description    string
-	Body           string
-	TagList        []string
-	Favorited      bool
-	FavoritesCount int
-	Author         Profile
-	CreatedAt      time.Time
-	UpdatedAt      time.Time
+	gorm.Model
+	Slug        string
+	Title       string
+	Description string
+	Body        string
+	Author      Profile
+	AuthorId    uint
+	Tags        []Tag
+	Comments    []Comment
 }
