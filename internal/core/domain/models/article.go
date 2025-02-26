@@ -21,8 +21,16 @@ type Article struct {
 	Title       string
 	Description string
 	Body        string
-	Author      Profile
+	Author      ArticleUser
 	AuthorId    uint
 	Tags        []Tag
 	Comments    []Comment
+}
+
+type ArticleUser struct {
+	gorm.Model
+	User      User
+	UserId    uint
+	Articles  []Article
+	Favorited []Favorite
 }

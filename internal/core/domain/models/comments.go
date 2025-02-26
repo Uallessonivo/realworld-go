@@ -20,7 +20,7 @@ type Comment struct {
 	gorm.Model
 	Article   Article
 	ArticleId uint
-	Author    Profile
+	Author    ArticleUser
 	AuthorId  uint
 	Body      string
 }
