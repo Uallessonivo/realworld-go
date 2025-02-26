@@ -1,6 +1,8 @@
 package models
 
-import "time"
+import (
+	"gorm.io/gorm"
+)
 
 type UserRegistrationRequest struct {
 	Email    string
@@ -30,12 +32,10 @@ type UserResponse struct {
 }
 
 type User struct {
-	ID           int
-	Email        string
+	gorm.Model
 	Username     string
-	PasswordHash string
+	Email        string
 	Bio          string
 	Image        string
-	CreatedAt    time.Time
-	UpdatedAt    time.Time
+	PasswordHash string
 }
