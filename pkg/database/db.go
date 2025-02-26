@@ -14,8 +14,10 @@ func InitDb() {
 
 	if er := db.AutoMigrate(
 		&models.User{},
-		&models.Profile{},
+		&models.Tag{},
 		&models.Comment{},
+		&models.Favorite{},
+		&models.ArticleUser{},
 		&models.Article{}); er != nil {
 		panic("failed to migrate schemas")
 	}
