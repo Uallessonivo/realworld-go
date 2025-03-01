@@ -8,10 +8,6 @@ type CommentRequest struct {
 	Body string
 }
 
-type CommentResponse struct {
-	Comment Comment
-}
-
 type CommentsResponse struct {
 	Comments []Comment
 }
