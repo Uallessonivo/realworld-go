@@ -12,7 +12,7 @@ type ArticleRequest struct {
 }
 
 type ArticleResponse struct {
-	Article Article
+	Articles []Article
 }
 
 type Article struct {
@@ -25,12 +25,4 @@ type Article struct {
 	AuthorId    uint
 	Tags        []Tag
 	Comments    []Comment
-}
-
-type ArticleUser struct {
-	gorm.Model
-	User      User
-	UserId    uint
-	Articles  []Article
-	Favorited []Favorite
 }
